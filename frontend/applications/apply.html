@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply Now | CareerConnect</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        Career<span>Connect</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="../pages/jobs.html">
+            Jobs
+        </a>
+
+        <a href="../pages/internships.html">
+            Internships
+        </a>
+
+        <a href="../pages/companies.html">
+            Companies
+        </a>
+
+    </nav>
+
+
+    <div class="nav-buttons">
+
+        <a href="../pages/login.html" class="login-btn">
+            Login
+        </a>
+
+        <a href="../pages/register.html" class="register-btn">
+            Register
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- APPLICATION HEADER -->
+
+<section class="profile-page-header">
+
+    <div>
+
+        <p class="section-tag">
+            CAREERCONNECT APPLICATION
+        </p>
+
+        <h1>
+            Apply for an <span>Opportunity</span>
+        </h1>
+
+        <p>
+            Complete the application form below to apply
+            for a job or internship.
+        </p>
+
+    </div>
+
+
+    <a
+        href="my-applications.html"
+        class="dashboard-primary-btn">
+
+        <i class="fa-solid fa-file-lines"></i>
+
+        My Applications
+
+    </a>
+
+</section>
+
+
+
+<!-- APPLICATION FORM -->
+
+<main class="profile-container">
+
+    <form id="applicationForm">
+
+
+        <!-- OPPORTUNITY DETAILS -->
+
+        <section class="profile-form-card">
+
+            <div class="profile-form-heading">
+
+                <div class="profile-form-icon blue-profile">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Opportunity Details
+                    </h2>
+
+                    <p>
+                        Enter the opportunity you want to apply for.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Opportunity Type
+                    </label>
+
+                    <select id="opportunityType" required>
+
+                        <option value="">
+                            Select Type
+                        </option>
+
+                        <option value="Job">
+                            Job
+                        </option>
+
+                        <option value="Internship">
+                            Internship
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Job / Internship Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="opportunityTitle"
+                        placeholder="Example: Software Developer Intern"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Company Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="companyName"
+                        placeholder="Enter company name"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="companyLocation"
+                        placeholder="Example: Mumbai / Remote">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STUDENT DETAILS -->
+
+        <section class="profile-form-card">
+
+            <div class="profile-form-heading">
+
+                <div class="profile-form-icon purple-profile">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Student Information
+                    </h2>
+
+                    <p>
+                        Provide your contact information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="studentPhone"
+                        placeholder="Enter your phone number"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentCourse"
+                        placeholder="Example: Computer Engineering"
+                        required>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- APPLICATION DETAILS -->
+
+        <section class="profile-form-card">
+
+            <div class="profile-form-heading">
+
+                <div class="profile-form-icon green-profile">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Application Details
+                    </h2>
+
+                    <p>
+                        Add your skills and a short message.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-form-grid">
+
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Skills
+                    </label>
+
+                    <input
+                        type="text"
+                        id="applicationSkills"
+                        placeholder="Example: C++, Java, HTML, CSS, JavaScript"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Cover Message
+                    </label>
+
+                    <textarea
+                        id="coverMessage"
+                        rows="6"
+                        placeholder="Write a short message to the company..."
+                        required></textarea>
+
+                </div>
+
+
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Upload Resume
+                    </label>
+
+                    <input
+                        type="file"
+                        id="resume"
+                        accept=".pdf,.doc,.docx"
+                        required>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="profile-save-section">
+
+
+            <a
+                href="my-applications.html"
+                class="cancel-profile-btn">
+
+                Cancel
+
+            </a>
+
+
+            <button
+                type="submit"
+                class="save-profile-btn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Submit Application
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+
+    <!-- SUCCESS MESSAGE -->
+
+    <section
+        id="applicationSuccess"
+        class="saved-profile-card"
+        style="display: none;">
+
+        <div class="saved-profile-heading">
+
+            <div>
+
+                <p class="section-tag">
+                    APPLICATION SUBMITTED
+                </p>
+
+                <h2>
+                    Application Submitted Successfully!
+                </h2>
+
+            </div>
+
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+
+        <p>
+
+            Your application has been recorded successfully.
+            You can track its status from My Applications.
+
+        </p>
+
+
+        <div style="margin-top: 25px;">
+
+            <a
+                href="my-applications.html"
+                class="save-profile-btn">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                View My Applications
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <div class="logo footer-logo">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                Career<span>Connect</span>
+
+            </div>
+
+
+            <p>
+
+                A centralized platform for managing
+                placements and internships.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../pages/jobs.html">
+                Jobs
+            </a>
+
+            <a href="../pages/internships.html">
+                Internships
+            </a>
+
+            <a href="../pages/companies.html">
+                Companies
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 CareerConnect.
+        Placement & Internship Management System.
+
+    </div>
+
+</footer>
+
+
+
+<!-- APPLICATION JAVASCRIPT -->
+
+<script>
+
+const applicationForm =
+    document.getElementById("applicationForm");
+
+
+applicationForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    const application = {
+
+        type:
+            document.getElementById("opportunityType").value,
+
+        title:
+            document.getElementById("opportunityTitle").value,
+
+        company:
+            document.getElementById("companyName").value,
+
+        location:
+            document.getElementById("companyLocation").value,
+
+        studentName:
+            document.getElementById("studentName").value,
+
+        email:
+            document.getElementById("studentEmail").value,
+
+        phone:
+            document.getElementById("studentPhone").value,
+
+        course:
+            document.getElementById("studentCourse").value,
+
+        skills:
+            document.getElementById("applicationSkills").value,
+
+        message:
+            document.getElementById("coverMessage").value,
+
+        status:
+            "Application Submitted",
+
+        date:
+            new Date().toLocaleDateString()
+
+    };
+
+
+    let applications =
+        JSON.parse(
+            localStorage.getItem("careerConnectApplications")
+        ) || [];
+
+
+    applications.push(application);
+
+
+    localStorage.setItem(
+        "careerConnectApplications",
+        JSON.stringify(applications)
+    );
+
+
+    applicationForm.style.display = "none";
+
+
+    document.getElementById("applicationSuccess")
+        .style.display = "block";
+
+
+    alert("Application submitted successfully!");
+
+});
+
+</script>
+
+
+</body>
+
+</html>

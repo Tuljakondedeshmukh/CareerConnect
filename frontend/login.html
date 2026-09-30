@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | CareerConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #eff6ff, #f8fafc);
+            min-height: 100vh;
+            color: #172033;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* NAVBAR */
+
+        .navbar {
+            height: 75px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #e5eaf0;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+            color: #172033;
+        }
+
+        .logo i {
+            color: #2563eb;
+            margin-right: 7px;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .back-home {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .back-home:hover {
+            color: #2563eb;
+        }
+
+
+        /* LOGIN AREA */
+
+        .login-container {
+            min-height: calc(100vh - 75px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+
+        .login-card {
+            width: 100%;
+            max-width: 430px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #e5eaf0;
+            box-shadow: 0 20px 60px rgba(37, 99, 235, 0.12);
+        }
+
+
+        /* HEADER */
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-icon {
+            width: 65px;
+            height: 65px;
+            background: #dbeafe;
+            color: #2563eb;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 18px;
+            font-size: 27px;
+        }
+
+        .login-header h1 {
+            font-size: 29px;
+            margin-bottom: 8px;
+        }
+
+        .login-header p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+
+        /* USER TYPE */
+
+        .user-type {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .user-type input {
+            display: none;
+        }
+
+        .user-type label {
+            border: 1px solid #d9e0e8;
+            padding: 11px 5px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748b;
+            transition: 0.3s;
+        }
+
+        .user-type label i {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        .user-type input:checked + label {
+            background: #eff6ff;
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+
+        /* FORM */
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #334155;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box > i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 48px;
+            border: 1px solid #d9e0e8;
+            border-radius: 8px;
+            padding: 0 42px;
+            font-family: inherit;
+            font-size: 13px;
+            outline: none;
+            color: #172033;
+        }
+
+        .input-box input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            cursor: pointer;
+        }
+
+
+        /* OPTIONS */
+
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        .remember input {
+            accent-color: #2563eb;
+        }
+
+        .forgot-password {
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        /* LOGIN BUTTON */
+
+        .login-button {
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .login-button i {
+            margin-left: 8px;
+        }
+
+
+        /* DIVIDER */
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 25px 0;
+            color: #94a3b8;
+            font-size: 11px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            height: 1px;
+            background: #e5eaf0;
+            flex: 1;
+        }
+
+
+        /* REGISTER */
+
+        .register-text {
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .register-text a {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+
+        /* SECURITY */
+
+        .security-note {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            margin-top: 25px;
+            color: #94a3b8;
+            font-size: 11px;
+        }
+
+        .security-note i {
+            color: #16a34a;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 500px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .login-card {
+                padding: 28px 22px;
+            }
+
+            .login-header h1 {
+                font-size: 25px;
+            }
+
+            .user-type label {
+                font-size: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Career<span>Connect</span>
+
+        </div>
+
+
+        <a href="index.html" class="back-home">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+    </header>
+
+
+
+    <!-- LOGIN -->
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+
+            <!-- HEADER -->
+
+            <div class="login-header">
+
+                <div class="login-icon">
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                </div>
+
+                <h1>Welcome Back!</h1>
+
+                <p>
+                    Login to continue your CareerConnect journey.
+                </p>
+
+            </div>
+
+
+
+            <!-- USER TYPE -->
+
+            <div class="user-type">
+
+
+                <div>
+
+                    <input
+                        type="radio"
+                        name="userType"
+                        id="student"
+                        value="student"
+                        checked>
+
+                    <label for="student">
+
+                        <i class="fa-solid fa-user-graduate"></i>
+
+                        Student
+
+                    </label>
+
+                </div>
+
+
+                <div>
+
+                    <input
+                        type="radio"
+                        name="userType"
+                        id="company"
+                        value="company">
+
+                    <label for="company">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Company
+
+                    </label>
+
+                </div>
+
+
+                <div>
+
+                    <input
+                        type="radio"
+                        name="userType"
+                        id="admin"
+                        value="admin">
+
+                    <label for="admin">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                        Admin
+
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- LOGIN FORM -->
+
+            <form id="loginForm">
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required>
+
+                        <i
+                            class="fa-solid fa-eye password-toggle"
+                            id="togglePassword">
+                        </i>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OPTIONS -->
+
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember">
+
+                        Remember me
+
+                    </label>
+
+
+                    <a href="#" class="forgot-password">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-button">
+
+                    Login
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- DIVIDER -->
+
+            <div class="divider">
+
+                OR
+
+            </div>
+
+
+
+            <!-- REGISTER -->
+
+            <div class="register-text">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+            </div>
+
+
+
+            <!-- SECURITY -->
+
+            <div class="security-note">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Your information is securely protected.
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        /* PASSWORD VISIBILITY */
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        const password =
+            document.getElementById("password");
+
+
+        togglePassword.addEventListener("click", function () {
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                togglePassword.classList.remove("fa-eye");
+
+                togglePassword.classList.add("fa-eye-slash");
+
+            } else {
+
+                password.type = "password";
+
+                togglePassword.classList.remove("fa-eye-slash");
+
+                togglePassword.classList.add("fa-eye");
+
+            }
+
+        });
+
+
+
+        /* LOGIN FORM */
+
+        document.getElementById("loginForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const email =
+                document.getElementById("email").value;
+
+            const passwordValue =
+                document.getElementById("password").value;
+
+
+            if (email === "" || passwordValue === "") {
+
+                alert("Please enter your email and password.");
+
+                return;
+
+            }
+
+
+            alert("Login successful!");
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
+<script>
+    const loginForm = document.querySelector("form");
+
+    loginForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        window.location.href = "dashboard/index.html";
+
+    });
+</script>

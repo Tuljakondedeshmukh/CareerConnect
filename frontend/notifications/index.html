@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications | CareerConnect</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Career<span>Connect</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../pages/jobs.html">
+                Jobs
+            </a>
+
+            <a href="../pages/internships.html">
+                Internships
+            </a>
+
+            <a href="../pages/companies.html">
+                Companies
+            </a>
+
+        </nav>
+
+
+        <div class="dashboard-user">
+
+            <div class="dashboard-user-icon">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div>
+
+                <strong>
+                    Student
+                </strong>
+
+                <span>
+                    Student Account
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="notifications-header">
+
+        <div>
+
+            <p class="section-tag">
+                UPDATES & ALERTS
+            </p>
+
+            <h1>
+                Notifications & <span>Interviews</span>
+            </h1>
+
+            <p>
+                Stay updated about your applications,
+                interviews and new career opportunities.
+            </p>
+
+        </div>
+
+
+        <a
+            href="../dashboard/index.html"
+            class="dashboard-primary-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Dashboard
+
+        </a>
+
+    </section>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="notifications-container">
+
+
+        <!-- NOTIFICATIONS -->
+
+        <section class="notification-card">
+
+            <div class="notification-heading">
+
+                <div>
+
+                    <h2>
+                        Notifications
+                    </h2>
+
+                    <p>
+                        Your latest placement updates.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="mark-read-btn"
+                    onclick="markNotificationsRead()">
+
+                    <i class="fa-solid fa-check-double"></i>
+
+                    Mark All as Read
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Notification 1 -->
+
+            <div class="notification-item unread">
+
+                <div class="notification-icon blue-notification">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+
+                <div class="notification-content">
+
+                    <div class="notification-title-row">
+
+                        <h3>
+                            Interview Scheduled
+                        </h3>
+
+                        <span>
+                            2 hours ago
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Your interview for Software Developer
+                        at TechNova Solutions has been scheduled
+                        for 5 October 2026 at 10:30 AM.
+                    </p>
+
+                    <strong>
+                        Online Interview
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Notification 2 -->
+
+            <div class="notification-item unread">
+
+                <div class="notification-icon purple-notification">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+
+                <div class="notification-content">
+
+                    <div class="notification-title-row">
+
+                        <h3>
+                            Application Shortlisted
+                        </h3>
+
+                        <span>
+                            Yesterday
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Congratulations! Your application for
+                        Web Developer Intern at InnovateTech
+                        has been shortlisted.
+                    </p>
+
+                    <strong>
+                        Check your application status
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Notification 3 -->
+
+            <div class="notification-item">
+
+                <div class="notification-icon green-notification">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+
+                <div class="notification-content">
+
+                    <div class="notification-title-row">
+
+                        <h3>
+                            New Opportunity
+                        </h3>
+
+                        <span>
+                            2 days ago
+                        </span>
+
+                    </div>
+
+                    <p>
+                        A new Data Analyst Internship at
+                        DataWorks India matches your skills
+                        and profile.
+                    </p>
+
+                    <strong>
+                        View Opportunity
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Notification 4 -->
+
+            <div class="notification-item">
+
+                <div class="notification-icon orange-notification">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                </div>
+
+
+                <div class="notification-content">
+
+                    <div class="notification-title-row">
+
+                        <h3>
+                            Application Under Review
+                        </h3>
+
+                        <span>
+                            3 days ago
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Your application for Junior Software
+                        Engineer at FutureSoft Technologies
+                        is currently under review.
+                    </p>
+
+                    <strong>
+                        Application ID: CC-2026-1042
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INTERVIEW SCHEDULE -->
+
+        <section class="interview-card">
+
+            <div class="notification-heading">
+
+                <div>
+
+                    <h2>
+                        Interview Schedule
+                    </h2>
+
+                    <p>
+                        Your upcoming interviews and recruitment events.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Interview 1 -->
+
+            <div class="interview-item">
+
+                <div class="interview-date">
+
+                    <span>
+                        OCT
+                    </span>
+
+                    <strong>
+                        05
+                    </strong>
+
+                    <small>
+                        2026
+                    </small>
+
+                </div>
+
+
+                <div class="interview-details">
+
+                    <h3>
+                        Software Developer
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-building"></i>
+                        TechNova Solutions
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            10:30 AM
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-video"></i>
+                            Online Interview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="interview-action"
+                    onclick="showInterviewMessage()">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Interview 2 -->
+
+            <div class="interview-item">
+
+                <div class="interview-date">
+
+                    <span>
+                        OCT
+                    </span>
+
+                    <strong>
+                        08
+                    </strong>
+
+                    <small>
+                        2026
+                    </small>
+
+                </div>
+
+
+                <div class="interview-details">
+
+                    <h3>
+                        Web Developer Intern
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-building"></i>
+                        InnovateTech
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            2:00 PM
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Campus Interview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="interview-action"
+                    onclick="showInterviewMessage()">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Interview 3 -->
+
+            <div class="interview-item">
+
+                <div class="interview-date">
+
+                    <span>
+                        OCT
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <small>
+                        2026
+                    </small>
+
+                </div>
+
+
+                <div class="interview-details">
+
+                    <h3>
+                        Data Analyst Intern
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-building"></i>
+                        DataWorks India
+                    </p>
+
+                    <div class="interview-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            11:00 AM
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-video"></i>
+                            Online Interview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="interview-action"
+                    onclick="showInterviewMessage()">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="logo footer-logo">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    Career<span>Connect</span>
+
+                </div>
+
+                <p>
+                    A centralized platform for managing
+                    placements and internships.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../pages/jobs.html">
+                    Jobs
+                </a>
+
+                <a href="../pages/internships.html">
+                    Internships
+                </a>
+
+                <a href="../pages/companies.html">
+                    Companies
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 CareerConnect.
+            Placement & Internship Management System.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function markNotificationsRead() {
+
+            const notifications =
+                document.querySelectorAll(".notification-item");
+
+            notifications.forEach(function(notification) {
+
+                notification.classList.remove("unread");
+
+            });
+
+            alert("All notifications marked as read.");
+
+        }
+
+
+        function showInterviewMessage() {
+
+            alert(
+                "Interview details will be available here."
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
